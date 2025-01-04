@@ -1,0 +1,32 @@
+.parent{
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(15, 15, 36);
+    color: white;
+    line-height:35px;
+
+   
+    
+}
+hr{
+    width: 100%;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: rgb(117, 111, 111);
+}
+
+button{
+    width: 220px;
+    height: 30px;
+    background-color: rgb(247, 119, 0);
+    color: wheat;
+    border-radius: 10px;
+    border: 0px;
+}

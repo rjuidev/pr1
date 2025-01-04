@@ -1,0 +1,60 @@
+<div class="parent">
+    
+    <div class="child">
+        <h1>Calculator</h1>
+        <label for=""></label>
+        <input type="number" [(ngModel)]="num1" id="rr" placeholder="Enter the value"> <br> <br>
+        <label for=""></label>
+        <input type="number" [(ngModel)]="num2"  id="pp"placeholder="Enter the value">
+    
+    
+        <h2 id="result">Result is: {{result}}</h2>
+
+    <button (click)="Add()">Addition</button> 
+    <button (click)="Sub()">Substarction</button> 
+    <button (click)="Mul()">Multiply</button> 
+    <button (click)="div()">division</button> 
+</div>
+
+ <script>
+    function Add(){
+        var rr=document.getElementById('rr').valueAsNumber;
+        console.log(rr);
+        var pp=document.getElementById('pp').valueAsNumber;
+        console.log(pp);
+
+        var result=(rr+pp);
+        console.log(result);
+        document.getElementById('result').innerText=result;
+    }
+    function Sub(){
+        var rr=document.getElementById('rr').valueAsNumber;
+        console.log(rr);
+        var pp=document.getElementById('pp').valueAsNumber;
+        console.log(pp);
+
+        var result=(rr-pp);
+        console.log(result);
+        document.getElementById('result').innerText=result;
+    }
+    function Mul(){
+        var rr=document.getElementById('rr').valueAsNumber;
+        console.log(rr);
+        var pp=document.getElementById('pp').valueAsNumber;
+        console.log(pp);
+
+        var result=(rr*pp);
+        console.log(result);
+        document.getElementById('result').innerText=result;
+    }
+    function div(){
+        var rr=document.getElementById('rr').valueAsNumber;
+        console.log(rr);
+        var pp=document.getElementById('pp').valueAsNumber;
+        console.log(pp);
+
+        var result=(rr/pp);
+        console.log(result);
+        document.getElementById('result').innerText=result;
+    }
+ </script> 

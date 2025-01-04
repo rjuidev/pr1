@@ -1,0 +1,43 @@
+<div class="parent">
+    <div class="main">
+        <div class="text">
+                <h1>Rectangle</h1>
+                <label for="">Length : </label>
+                <input type="number" [(ngModel)]="length" class="length">
+                <br><br>
+                <label for="test">Breadth : </label>
+                <input type="number" [(ngModel)]="breadth"  class="breadth">
+                <br><br>
+                <button class="b1" (click)="area()">area</button>
+                <i>&nbsp;</i><i>&nbsp;</i>
+
+                <button class="b2" (click)="perimeter()">perimeter</button>
+
+                <h2 id="results">Result is:{{result}}</h2>
+
+                <script>
+                    // Araa
+                    function submit1() {
+                      var first = Number(document.getElementById("length").value);
+                      var second = Number(document.getElementById("breadth").value);
+                      var result = first*second;
+                      console.log(result);
+                      document.getElementById("total").innerText = "Area: " + result;
+                    }
+              
+                    function submit2() {
+                      var first = Number(document.getElementById("length").value);
+                      var second = Number(document.getElementById("breadth").value);
+                      var result = 2*(first + second)
+                      console.log(result);
+                      document.getElementById("total").innerText = "Perimaeter: " + result;
+                    }
+              
+                  </script>
+</div>
+
+</div>
+
+</div>
+
+

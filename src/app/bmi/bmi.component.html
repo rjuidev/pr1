@@ -1,0 +1,53 @@
+<div class="parent">
+   <div class="main">
+       <div class="text">
+<h2>BMI CALCULATOR</h2>
+
+<label for="">Height:</label>
+<input type="number" [(ngModel)]="height"  id="height"> <br> <br>
+<label for="">weight:</label>
+<input type="number" [(ngModel)]="weight"  id="weight"> <br>
+<h2 id="bmi">Result is: {{bmi}}</h2>
+<button (click)="submit()">submit</button>
+</div>
+</div>
+
+</div>
+
+<!-- <script>
+   function submit(){
+       var height=document.getElementById('height').value;
+       console.log(height);
+       var weight=document.getElementById('weight').value;
+       console.log(weight);
+
+       var result=weight/(height*height);
+       console.log(result);
+
+       if(result<18.5 && result>0){
+           var bmi= "underweight";
+
+       }
+       else if (result>=18.5 && result<25){
+           bmi="Normal";
+        }
+
+        else if (result>=25 && result<30){
+           bmi="overweight";
+        }
+        else if (result>=30 && result<35){
+           bmi="Obese";
+        }
+        else if (result>=35 && result<40){
+           bmi="severely obese";
+        }
+        else if (result>=40){
+           bmi="Morbidly obese";
+        }
+        else{
+           alert("Error")
+        }
+       document.getElementById('bmi').innerText=bmi;               
+
+   }
+</script> -->

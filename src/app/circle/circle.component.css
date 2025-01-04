@@ -1,0 +1,21 @@
+h2 {
+    color:white;
+  }
+  .b1,.b2,.b3{
+    color: mediumaquamarine;
+    background-color:white;
+    font-size: medium;
+  }
+  .Intro{
+    font-weight: 900px;
+    color:chocolate;
+    font-style: normal;
+    
+  }
+  h1{
+    text-align: left;
+    font-size: xx-large;
+  }
+  .parent{
+     
+  }
