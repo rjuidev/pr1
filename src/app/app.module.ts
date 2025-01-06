@@ -12,6 +12,8 @@ import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { MywebsiteComponent } from './mywebsite/mywebsite.component';
 import { FormsModule } from '@angular/forms';
+import { EmployeeComponent } from './employee/employee.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     RectangleComponent,
     CircleComponent,
     BmiComponent,
-    MywebsiteComponent
+    MywebsiteComponent,
+    EmployeeComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
