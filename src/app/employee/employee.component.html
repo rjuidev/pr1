@@ -3,6 +3,10 @@
 
 <input type="text" placeholder="Enter your Keywords" [(ngModel)]="text" (keyup)="search()">
 
+<button class="btn btn-info" (click)="hike()" >Add 50k hike</button>
+<button class="btn btn-warning" (click)="cost()" >Cost to Company</button>
+
+
    <select [(ngModel)]="role" (change)="roleFilter()" >
       <option>UIDeveloper</option>
       <option>Software Developer</option>
@@ -11,6 +15,18 @@
    </select>
 <button class="btn btn-info" (click)="sort()" >Pakages High to Low</button>  <i>&nbsp;</i>
 <button class="btn btn-info" (click)="sort1()" >Pakages Low to High</button>
+<hr>
+<label for="">Name</label>
+<input type="text" [(ngModel)]="name" > 
+<label for="">Experience</label>
+<input type="text"  [(ngModel)]="experience" >
+<label for="">Package</label>
+<input type="text"  [(ngModel)]="package" >
+<label for="">Role</label>
+<input type="text"  [(ngModel)]="role" >
+
+<button class="btn btn-primary" (click)="add()">ADD EMPLOYEE</button>
+
 <table class="table table-dark table-striped table-hover table-bordered
 ">
      <thead>

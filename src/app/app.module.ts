@@ -14,6 +14,7 @@ import { MywebsiteComponent } from './mywebsite/mywebsite.component';
 import { FormsModule } from '@angular/forms';
 import { EmployeeComponent } from './employee/employee.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DirectivesComponent } from './directives/directives.component';
     BmiComponent,
     MywebsiteComponent,
     EmployeeComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    FlipkartComponent
   ],
   imports: [
     BrowserModule,
