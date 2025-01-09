@@ -1,0 +1,45 @@
+.containter{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+}
+.imagebox{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    position: relative;  
+     
+
+}
+
+
+#i{
+    width: 250px;
+    height: 250px;
+}
+.btn , .author{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: rgb(250, 204, 0);
+    font-weight: 700; 
+    opacity: 0;
+}
+
+
+.imagebox:hover .btn,
+.imagebox:hover .author{
+    opacity: 1;
+}
+
+ .btn{
+    width: 150px;
+    height: 40px;
+    margin-top: 10%;
+    margin-left: 2%;
+    font-weight: 700;
+    color: antiquewhite;
+     
+    
+}

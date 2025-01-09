@@ -1,17 +1,15 @@
 .parent{
      width: 100vw;
      height: 100vh;
-     display: flex;
+      display: flex; 
 }
 .left{
     width: 20%;
     height: 100%;
     background-color: rgb(15, 15, 36);
     color: white;
-    line-height:35px;
-
-   
-    
+    /* line-height:20px;  */
+    overflow: auto;
 }
 hr{
     width: 100%;
@@ -19,7 +17,9 @@ hr{
 .right{
     width: 80%;
     height: 100%;
-    background-color: rgb(117, 111, 111);
+    background-color: rgb(223, 202, 84);
+    overflow: auto;
+    
 }
 
 button{

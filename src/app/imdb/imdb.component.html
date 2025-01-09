@@ -1,0 +1,12 @@
+<div class="parent">
+    <div class="container p-5  text-white   "  *ngFor=" let imdb of imbd" >
+        
+        <h3>{{imdb.movie}}</h3>
+        <div class="ratings"> <p>Ratings: <span *ngFor="let star of [].constructor(getstar(imdb.rating)); let i = index"> 
+            <img src="assets/star.png" alt="Star" class="star-img"> </span> </p> </div>
+         <a href="{{imdb.imdb_url}}" class="btn btn-dark" >View on IMDB</a>
+
+    </div>
+    
+
+</div>

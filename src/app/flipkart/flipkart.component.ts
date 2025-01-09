@@ -75,7 +75,7 @@ export class FlipkartComponent {
   productname: string = '';
   price: number = 0;
   ratings: number = 0;
-  Freedelivery: boolean = true;
+  Freedelivery: boolean = false;  //we can add true or false as a default value
 
   add() {
     let product = {

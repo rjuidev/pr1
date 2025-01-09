@@ -1,0 +1,7 @@
+<div class="containter">
+  <div class="imagebox" *ngFor="let pintrest of pintrest">
+    <img id="i" src="{{ pintrest.download_url }}" alt="" />
+    <div class="author">{{ pintrest.author }}</div>
+    <a href="{{ pintrest.download_url }}" target="_blank" class="btn btn-primary">Download</a>
+  </div>
+</div>

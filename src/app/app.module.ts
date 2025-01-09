@@ -15,6 +15,16 @@ import { FormsModule } from '@angular/forms';
 import { EmployeeComponent } from './employee/employee.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from "@angular/common/http";
+import { MyntraComponent } from './myntra/myntra.component';
+import { MailComponent } from './mail/mail.component';
+import { PintrestComponent } from './pintrest/pintrest.component';
+import { BlogComponent } from './blog/blog.component';
+import { ImdbComponent } from './imdb/imdb.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ProfilesComponent } from './profiles/profiles.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +39,23 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
     MywebsiteComponent,
     EmployeeComponent,
     DirectivesComponent,
-    FlipkartComponent
+    FlipkartComponent,
+    VehicleComponent,
+    MyntraComponent,
+    MailComponent,
+    PintrestComponent,
+    BlogComponent,
+    ImdbComponent,
+    WeatherComponent,
+    ProfilesComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
