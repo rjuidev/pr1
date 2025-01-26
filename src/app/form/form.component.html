@@ -1,0 +1,87 @@
+<h2>Userdata</h2>
+<form action="" [formGroup]="studentdata">
+<label for="">Name :</label>
+<input type="text" formControlName="name" > <br>
+
+<div *ngIf="studentdata.get('name')?.invalid && studentdata.get('name')?.touched">
+    <p *ngIf="studentdata.get('name')?.errors?.['required']">Name is Required</p>
+
+</div>
+
+<label for="">Class:</label>
+<input type="number"  formControlName="class"> <br>
+
+<div *ngIf="studentdata.get('class')?.invalid && studentdata.get('class')?.touched">
+    <p *ngIf="studentdata.get('class')?.errors?.['required']">class is Required</p>
+
+</div>
+<label for="">FatherName:</label>
+<input type="text"  formControlName="fathername"> <br>
+
+<div *ngIf="studentdata.get('fathername')?.invalid && studentdata.get('fathername')?.touched">
+    <p *ngIf="studentdata.get('fathername')?.errors?.['required']">Father Name is Required</p>
+
+</div>
+
+<label for="">Date of Birth: </label>
+<input type="date"  formControlName="dob"> <br>
+
+<div formGroupName="address">
+    <label for="">City:</label>
+<input type="text" formControlName="city"> <br>
+<label for="state">state:</label>
+<input type="text" formControlName="state"> <br>
+<label for="pincode">pincode:</label>
+<input type="number" formControlName="pincode" > <br>
+
+<div *ngIf="studentdata.get('address')?.get('pincode')?.invalid && studentdata.get('address')?.get('pincode')?.touched">
+    <p *ngIf="studentdata.get('address')?.get('pincode')?.errors?.['required']">Pincode is Mandatory</p>
+    <p *ngIf="studentdata.get('address')?.get('pincode')?.errors?.['min']">Minimum  6 numbers</p>
+    <p *ngIf="studentdata.get('address')?.get('pincode')?.errors?.['max']">Maximum  6 numbers</p>
+</div>
+</div> <br>
+
+<button (click)="marks()" >Add to marksList</button>
+<div formArrayName="marks">
+<div *ngFor="let marks of marksFromArray.controls;let i=index">
+    <div formGroupName="{{i}}">
+        <h2>Add{{i+1}}</h2>
+        <label for="">Class:</label>
+                <input type="number" formControlName="class"> <br>
+                <label for="">year:</label>
+                <input type="number" formControlName="year"> <br>
+                <label for="">percentage:</label>
+                <input type="number" formControlName="percentage"> <br>
+
+    </div>
+ 
+</div>
+</div>
+
+<label for="">Type:</label>
+<input type="radio" name="type" formControlName="type" value="dayscholar">
+<label for="">Dayscholar:</label>
+<input type="radio" name="type" formControlName="type" value="residential">
+<label for="">Residential:</label>  <br> <br>
+
+<div *ngIf="studentdata.get('type')?.value=='dayscholar'">
+    <label for="" >Bus Fee</label>
+     <input type="number" formControlName="busfee">
+
+</div>
+<div *ngIf="studentdata.get('type')?.value=='residential'">
+    <label for="" >Hostel Fee</label>
+     <input type="number" formControlName="hostelfee">
+</div>
+
+
+
+<button class="btn btn-primary" (click)="submit()">Submit</button>
+
+
+
+
+
+
+
+</form>

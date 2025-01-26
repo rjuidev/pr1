@@ -20,20 +20,54 @@ import { ImdbComponent } from './imdb/imdb.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+import { IdcardComponent } from './idcard/idcard.component';
+import { CreateidcardComponent } from './createidcard/createidcard.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { FormComponent } from './form/form.component';
+import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { ViewidComponent } from './viewid/viewid.component';
 
-const routes: Routes = [{path:'mywebsite',component:MywebsiteComponent,children:[{path:'home',component:HomeComponent},{path:'welcome',component:WelcomeComponent},{path:'databinding',component:DatabindingComponent},
-  {path:'calculator',component:CalculatorComponent},{path:'rectangle',component:RectangleComponent},{path:'circle',component:CircleComponent},{path:'bmi',component:BmiComponent},{path:"employee",component:EmployeeComponent},{
-    path:'directives',component:DirectivesComponent},{path:"flipkart",component:FlipkartComponent},{path:"vehicle",component:VehicleComponent},{path:"myntra",component:MyntraComponent},{path:"Mail",component:MailComponent},{
-      path:"pintrest",component:PintrestComponent},{path:"blog",component:BlogComponent},{path:"imdb",component:ImdbComponent},{path:"weather",component:WeatherComponent},{path:"profiles",component:ProfilesComponent},{path:"carousel",component:CarouselComponent}
-]},
-
-
-
-
+const routes: Routes = [
+  {
+    path: '',component: MywebsiteComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'welcome', component: WelcomeComponent },
+      { path: 'databinding', component: DatabindingComponent },
+      { path: 'calculator', component: CalculatorComponent },
+      { path: 'rectangle', component: RectangleComponent },
+      { path: 'circle', component: CircleComponent },
+      { path: 'bmi', component: BmiComponent },
+      { path: 'employee', component: EmployeeComponent },
+      { path: 'directives',component: DirectivesComponent,},
+      { path: 'flipkart', component: FlipkartComponent },
+      { path: 'vehicle', component: VehicleComponent },
+      { path: 'myntra', component: MyntraComponent },
+      { path: 'Mail', component: MailComponent },
+      {path: 'pintrest',component: PintrestComponent,},
+      { path: 'blog', component: BlogComponent },
+      { path: 'imdb', component: ImdbComponent },
+      { path: 'weather', component: WeatherComponent },
+      { path: 'profiles', component: ProfilesComponent },
+      { path: 'carousel', component: CarouselComponent },
+      { path: 'accounts', component: AccountsComponent },
+      { path: 'createvehicle', component: CreatevehicleComponent },
+      { path: 'idcard', component: IdcardComponent },
+      { path: 'createidcard', component: CreateidcardComponent },
+      { path: 'create-user', component: CreateUserComponent },
+      { path: 'form', component:FormComponent },
+      { path: 'vehicledetails/:id', component:VehicledetailsComponent },
+      { path: 'edit-vehicle/:id', component: CreatevehicleComponent },
+      { path: 'viewid/:id', component:ViewidComponent },
+      { path: 'editid/:id', component:CreateidcardComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

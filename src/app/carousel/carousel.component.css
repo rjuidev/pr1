@@ -1,11 +1,30 @@
-.parent{
+/* Ensure the images inside the carousel are responsive */
+.carousel-image {
+   
+    height: 400px; /* Resize the image height to control space */
+    width:400px /* Ensures the images don't overflow */
+  }
+  
+  /* Optional: You can style the carousel container or parent */
+  
+  
+  .caro {
+    width: 600px;
+    height: 600px;
+    background-color: aqua;
+  }
+  .parent{
     width: 100%;
     height: 100%;
-    background-color: azure;
-    
-}
-.caro{
-    width: 50%;
-    height: auto;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-}
+ 
+  
+  
+ 
+  
+  

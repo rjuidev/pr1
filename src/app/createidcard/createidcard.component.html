@@ -1,0 +1,16 @@
+<div class="parent">
+    <div class="main">
+        <h1 style="margin-left: 200px;margin-top: 10px;" >Create Student </h1>
+        <form action="" [formGroup]="idcardForm" >
+         <input type="text" placeholder="Enter your Name" formControlName="name"> <br>
+         <input type="text" placeholder="Enter your city"  formControlName="city" ><br>
+         <input type="text" placeholder="Enter your D.O.B"  formControlName="dob"><br>
+         <input type="text" placeholder="Upload your profile picture"  formControlName="profile_picture"><br>
+         <input type="text" placeholder="Phone number" formControlName="phone"><br>
+         <input type="text" placeholder="Email" formControlName="email"><br>
+
+         <button (click)="create()" class="btn btn-success">submit</button><br>
+        </form>
+
+    </div>
+</div>

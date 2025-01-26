@@ -1,0 +1,64 @@
+
+<input type="text" [(ngModel)]="term" (keyup)="filter()">
+
+<select [(ngModel)]="column" > 
+    <option>account_name</option>
+   <option >available_balance</option>
+   <option >account_number</option>
+   <option >city</option>
+ </select>
+ 
+ <select [(ngModel)]="order" > 
+    <option>asc</option>
+    <option >desc</option>
+  </select>
+
+ 
+  <button class="btn btn-primary" (click)="sort()" >Sort</button>
+
+
+  <select [(ngModel)]="limit" > 
+    <option>10</option>
+   <option >20</option>
+   <option >30</option>
+   <option >40</option>
+   <option >50</option>
+   <option >60</option>
+ </select>
+ 
+ <select [(ngModel)]="page" > 
+    <option>1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+  </select>
+
+  <button class="btn btn-primary" (click)="pagination()">pagination</button>
+
+
+<table class="table table-dark table-striped table-hover table-bordered">
+     
+    <thead>
+        <tr>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>Actions</th>
+        
+        </tr>
+     </thead>
+   <tbody>
+         <tr *ngFor="let account of accounts">
+            
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.city}}</td>
+
+             <td><button class="btn btn-danger" (click)="delete(account.id)"><i class="bi bi-trash-fill"></i></button></td>
+            
+
+         </tr>
+   </tbody>
+</table>

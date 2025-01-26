@@ -1,0 +1,93 @@
+<h2>Reactive Forms</h2>
+
+<form action="" [formGroup]="userForm">
+
+    <label for="name">name:</label>
+    <input type="text" formControlName="name"> <br>
+
+    <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+        <p *ngIf="userForm.get('name')?.errors?.['required']">Name is Required</p>
+
+    </div> <br>
+
+    <label for="email">E-mail:</label>
+    <input type="text" formControlName="email"> <br>
+
+    <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+        <p *ngIf="userForm.get('email')?.errors?.['required']">email is Required</p>
+        <p *ngIf="userForm.get('email')?.errors?.['email']">Give correct email</p>
+
+    </div> <br>
+
+    <label for="password">password:</label>
+    <input type="password" formControlName="password"> <br>
+    <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched">
+        <p *ngIf="userForm.get('password')?.errors?.['required']">password is Required</p>
+        <p *ngIf="userForm.get('password')?.errors?.['minlength']">Minimum 6 characters</p>
+        <p *ngIf="userForm.get('password')?.errors?.['maxlength']">Maximum 10 characters</p>
+    </div> <br> <br>
+
+
+    <label for="mobile">mobile:</label>
+    <input type="number" formControlName="mobile"> <br>
+    <div *ngIf="userForm.get('mobile')?.invalid && userForm.get('mobile')?.touched">
+        <p *ngIf="userForm.get('mobile')?.errors?.['required']">mobile no is Required</p>
+        <p *ngIf="userForm.get('mobile')?.errors?.['min']">Enter correct mobile no</p>
+        <p *ngIf="userForm.get('mobile')?.errors?.['max']">Maximum 10 characters</p>
+    </div> <br> <br>
+
+    <div formGroupName="address">
+        <label for="village">village:</label>
+    <input type="text" formControlName="village"> <br>
+    <label for="district">district:</label>
+    <input type="text" formControlName="district"> <br>
+    <label for="state">state:</label>
+    <input type="text" formControlName="state"> <br>
+    <label for="pincode">pincode:</label>
+    <input type="number" formControlName="pincode"> <br>
+    </div> <br>
+
+    <label for="">Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayscholar">
+    <label for="">Dayscholar:</label>
+    <input type="radio" name="type" formControlName="type" value="hostel">
+    <label for="">Hostel:</label>  <br> <br>
+
+    <p>(used diff method for adding dynamically, check the Ts code)</p>
+
+    <div *ngIf="userForm.get('type')?.value=='dayscholar'">
+        <label for="" >Bus Fee</label>
+        <input type="number" formControlName="busfee">
+    </div>
+
+    <div *ngIf="userForm.get('type')?.value=='hostel'">
+        <label for="" >Hostel Fee</label>
+        <input type="number" formControlName="hostelfee">
+    </div>
+
+
+
+    <button (click)="addcard()">Addcard</button>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <h2>card{{i+1}}</h2>
+                <label for="">Number:</label>
+                <input type="number" formControlName="number"> <br>
+                <label for="">Expiry:</label>
+                <input type="month" formControlName="expiry"> <br>
+                <label for="">CVV:</label>
+                <input type="number" formControlName="cvv"> <br>
+                <button (click)="delete(i)">Deletecard</button>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button class="btn btn-primary" (click)="create()">Submit</button>
+
+
+</form>

@@ -11,7 +11,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { MywebsiteComponent } from './mywebsite/mywebsite.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,} from '@angular/forms';
 import { EmployeeComponent } from './employee/employee.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
@@ -25,6 +25,19 @@ import { ImdbComponent } from './imdb/imdb.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+import { IdcardComponent } from './idcard/idcard.component';
+import { CreateidcardComponent } from './createidcard/createidcard.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { ViewidComponent } from './viewid/viewid.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -48,13 +61,36 @@ import { CarouselComponent } from './carousel/carousel.component';
     ImdbComponent,
     WeatherComponent,
     ProfilesComponent,
-    CarouselComponent
+    CarouselComponent,
+    AccountsComponent,
+    CreatevehicleComponent,
+    IdcardComponent,
+    CreateidcardComponent,
+    CreateUserComponent,
+    FormComponent,
+    VehicledetailsComponent,
+    ViewidComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    ReactiveFormsModule,
+    
+    
+    
+    
+    
+    
+    
+   
+  
+    
+    
+
+
     
   ],
   providers: [],
