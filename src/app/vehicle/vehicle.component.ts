@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-vehicle',
@@ -75,7 +76,12 @@ export class VehicleComponent {
              }
            }
 
+           user:User={
+            name:'' ,
+            age:0
+           }
 
+           
           }
 
 

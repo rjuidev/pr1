@@ -3,7 +3,7 @@
 <form action="" [formGroup]="userForm">
 
     <label for="name">name:</label>
-    <input type="text" formControlName="name"> <br>
+    <input type="text" formControlName="name" appCapital> <br>
 
     <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
         <p *ngIf="userForm.get('name')?.errors?.['required']">Name is Required</p>
@@ -16,6 +16,7 @@
     <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
         <p *ngIf="userForm.get('email')?.errors?.['required']">email is Required</p>
         <p *ngIf="userForm.get('email')?.errors?.['email']">Give correct email</p>
+        <p *ngIf="userForm.get('email')?.errors?.['tcsMail']">Give Tcs email</p>
 
     </div> <br>
 

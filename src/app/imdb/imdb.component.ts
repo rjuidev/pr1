@@ -8,6 +8,7 @@ import { ImdbService } from '../imdb.service';
 })
 export class ImdbComponent {
        imbd:any=[]
+imdb: any;
   constructor (private _imdbService:ImdbService){
       _imdbService.getimdb().subscribe(
         (data:any)=>{this.imbd=data;

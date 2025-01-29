@@ -4,8 +4,12 @@
                 <img  src="{{myntra.image}}"alt="">
              
                 <div class="ratings">
-                      {{myntra.rating.rate}}
+                       <!-- {{myntra.rating.rate}} -->
+                       <app-rating [rating]="myntra.rating.rate"></app-rating>
+                     
                       {{myntra.rating.count}}
+
+                      
                </div> 
             </div>
             

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { MywebsiteComponent } from './mywebsite/mywebsite.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -28,6 +28,11 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { FormComponent } from './form/form.component';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
 import { ViewidComponent } from './viewid/viewid.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
 
 const routes: Routes = [
   {
@@ -62,12 +67,18 @@ const routes: Routes = [
       { path: 'edit-vehicle/:id', component: CreatevehicleComponent },
       { path: 'viewid/:id', component:ViewidComponent },
       { path: 'editid/:id', component:CreateidcardComponent },
+      { path: 'sibling1', component:Sibling1Component },
+      { path: 'sibling2', component:Sibling2Component},
+      {path:'parent', component:ParentComponent},
+      {path:'child', component:ChildComponent},
+      {path:'rating', component:RatingComponent},
+      {path:"payments",loadChildren:() => import ('./payments/payments.module').then(m=> m.PaymentsModule)}
     ],
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

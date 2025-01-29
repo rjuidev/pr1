@@ -16,7 +16,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { MyntraComponent } from './myntra/myntra.component';
 import { MailComponent } from './mail/mail.component';
 import { PintrestComponent } from './pintrest/pintrest.component';
@@ -34,13 +34,22 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
 import { ViewidComponent } from './viewid/viewid.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HomeComponent,
     WelcomeComponent,
@@ -70,30 +79,31 @@ import { ViewidComponent } from './viewid/viewid.component';
     FormComponent,
     VehicledetailsComponent,
     ViewidComponent,
-   
-  ],
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+      RatingComponent,
+      CapitalDirective,
+      BalancePipe
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
-    
-    
-    
-    
-    
-    
-   
-  
-    
-    
-
-
+    AboutUsModule
+ 
     
   ],
-  providers: [],
+  providers: [
+     { provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true}
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -171,6 +171,31 @@ Gaurds or Route Gaurds:
 2) can deactivate
 3)child can activate
 
+Angular life cycle Hooks=    video class
+=========================
+
+  * used to detect the changes
+
+
+       ngOnChanges-changes in input value- used in parent Child communication
+       ngOnInIt     -Initialization of value
+       ngDoCheck     -changes in component
+       ngContent In It
+       ngContent Check It
+       ngView Unit
+       ngView Check
+       ng Distroy   -cleanup existing Resources when coming out from component
+
+
+
+      ==>Initialization
+      ==>Close Detection
+      ==>Resource cleanup
+      ==>Custom logics
+
+
+      **class missed.check the content on yt.
+
 
 
 
@@ -192,6 +217,87 @@ import in app module.ts*
 ck editor
 
 material icons
+
+
+Communication:
+==============
+
+to share data b/w parents =>siblings -- siblings 1 and siblings 2
+                  child to parent -- parent and child comp
+                   child to child  
+
+created 2 siblings in the pr1 
+
+
+  **=> module Communication --pending
+  =>  page  Communication     
+
+
+  customs:
+  =======
+
+custom directives ---ng g d name---- ref capital directive --- used in create-user component : <input type="text" formControlName="name" appCapital> <br>
+  custom pipes  ---- ng g p name ----ref balance--used in vehicle component :  <td>{{vehicle.cost  | balance }}</td>
+   custom data types/modals --ng g i user--- (i:interface)- used in vehicle.ts- user:User={ name:'' ,age:0 }
+
+custom validators:
+===========================================================================================================
+
+create a file : validators.ts -> write function -> used in create-user email in Ts
+email: new FormControl('',[Validators.required,Validators.email,tcsMail]),
+
+to show error : write in html
+
+<p *ngIf="userForm.get('email')?.errors?.['tcsMail']">Give Tcs email</p>
+
+===========================================================================================================
+ custom api:
+ =============
+ create a json file in assests named as data.json , -> insert data in json file and call it in the service 
+
+ ex:  vehicle service
+ baseUrl:string="/assets/data.json"  - Ref vehicle service
+
+ it is called dummy Json .
+ =======================================================================================================
+     interceptors:
+it regarding api is public or private , if public it can be breached , so we use private but it can be used with token -> ng g interceptor 
+name(token). we can write in interceptor.ts and in app.module.ts -> 
+     providers: [
+     { provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true}
+  ]
+  ============================================================================================================
+     custom commands : 
+
+to run multiple commands
+
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "begin":"ng serve"
+  },
+
+  in terminal : npm run begin      
+
+ ========================================================== 
+
+Module:
+
+create: ng g m name(about)  -> to take comp in about take terminal on about and generate components , link module to the app.module.ts  , the loading is called as eager loading(all components laod at the time of login),
+link to app.module.ts -- module run at time of starting module called eager loading.
+
+Lazy loading : 
+
+when only needed , we give module to run. ex: payment module
+
+ng g m --routing --- to create routing to module
+
+
 
 
 

@@ -9,12 +9,13 @@ export class VehicleService {
   
   //we take one variable and store the url to reuse and for optamization of code.
 
-  baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction"
+  //custom api or Dummy api
 
-  constructor(private _httpClient:HttpClient) { 
+  // baseUrl:string="/assets/data.json"
 
-        
-  }
+   baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction"
+
+  constructor(private _httpClient:HttpClient) { }
 
   getVehicles():Observable<any>{
     return this._httpClient.get(this.baseUrl)

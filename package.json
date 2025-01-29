@@ -6,10 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "begin": "ng serve --open"
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "^15.2.11",
     "@angular/animations": "^15.2.0",
     "@angular/cdk": "^15.2.9",
     "@angular/common": "^15.2.0",
@@ -20,12 +22,13 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.11",
     "@angular/cli": "~15.2.11",
     "@angular/compiler-cli": "^15.2.0",
     "@types/jasmine": "~4.3.0",
